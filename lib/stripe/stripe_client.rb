@@ -195,7 +195,7 @@ module Stripe
         end
 
         case e
-        when Faraday::ClientError
+        when Faraday::Error
           if e.response
             handle_api_error(e.response)
           else
